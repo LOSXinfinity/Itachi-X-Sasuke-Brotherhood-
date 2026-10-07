@@ -61,6 +61,6 @@ npm run serve
 
 ## License
 
-Fan-made tribute. Naruto and its characters belong to Masashi Kishimoto / Shueisha. Not affiliated.
+Fan-made tribute. Naruto and its characters belong to Masashi Kishimoto. Not affiliated.
 
 Code: MIT License — feel free to learn from or adapt the animation techniques.
