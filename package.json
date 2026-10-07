@@ -1,0 +1,9 @@
+{
+  "name": "itachi-sasuke",
+  "private": true,
+  "version": "1.0.0",
+  "description": "兄弟 — Itachi & Sasuke. Static HTML/CSS/JS scroll story.",
+  "scripts": {
+    "serve": "npx --yes serve -l 5174 ."
+  }
+}

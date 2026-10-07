@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<script>document.documentElement.classList.remove('no-js');</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>兄弟 — Itachi &amp; Sasuke</title>
+<meta name="description" content="A scroll-told tribute to the Uchiha brothers: the last touch, the rain, the praise, and the memory underneath it all.">
+<meta name="theme-color" content="#070a14">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23e2b75e'/%3E%3Ccircle cx='16' cy='16' r='8.5' fill='none' stroke='%23070a14' stroke-width='1.2'/%3E%3Ccircle cx='16' cy='16' r='3.4' fill='%23070a14'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Kaisei+Tokumin:wght@700;800&family=Space+Grotesk:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="media/hero/f_001.webp">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ===================== SVG SYMBOLS ===================== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="tomoe" d="M0,-6 C8,-8 15,-5 17,3 C12,-1.5 8.5,-1.8 6,0 A6,6 0 1,1 0,-6 Z"/>
+    <symbol id="sg-line" viewBox="-50 -50 100 100">
+      <g fill="none" stroke="currentColor" stroke-width=".6">
+        <circle r="48"/><circle r="42" stroke-dasharray="1 3"/><circle r="27"/><circle r="9.5"/>
+      </g>
+      <g fill="none" stroke="currentColor" stroke-width=".8">
+        <use href="#tomoe" transform="rotate(0) translate(0,-27) rotate(-90)"/>
+        <use href="#tomoe" transform="rotate(120) translate(0,-27) rotate(-90)"/>
+        <use href="#tomoe" transform="rotate(240) translate(0,-27) rotate(-90)"/>
+      </g>
+    </symbol>
+    <!-- rough brush edge for the ink wash between night and paper -->
+    <filter id="ink-edge" x="-5%" y="-40%" width="110%" height="180%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.04" numOctaves="3" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="90" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<!-- ===================== PRELOADER ===================== -->
+<div class="loader" data-loader>
+  <div class="loader__door loader__door--l" aria-hidden="true"></div>
+  <div class="loader__door loader__door--r" aria-hidden="true"></div>
+  <div class="loader__core">
+    <p class="loader__kanji" data-loader-kanji aria-hidden="true">
+      <span class="loader__kanji-base">兄弟</span>
+      <span class="loader__kanji-fill">兄弟</span>
+    </p>
+    <p class="loader__by">ITACHI <em>&amp;</em> SASUKE</p>
+    <div class="loader__bar"><i data-loader-bar></i></div>
+    <p class="loader__pct"><b data-loader-pct>00</b><span>/ 100 — 記憶を呼び戻す</span></p>
+    <p class="sr-only" role="status">Loading</p>
+  </div>
+</div>
+
+<!-- ===================== AMBIENT CHROME ===================== -->
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><i data-progress></i></div>
+<div class="cursor" data-cursor aria-hidden="true">
+  <span class="cursor__dot"></span>
+  <span class="cursor__ring"><svg><use href="#sg-line"/></svg></span>
+</div>
+<canvas class="sparks" data-sparks aria-hidden="true"></canvas>
+
+<main id="top">
+
+  <!-- ===================== 01 · THE TOUCH — scroll-scrubbed forehead poke ===================== -->
+  <section class="hero" id="touch" data-hero aria-label="Itachi touches Sasuke's forehead">
+    <div class="hero__stage" data-hero-stage>
+
+      <canvas class="hero__canvas" data-hero-canvas></canvas>
+      <img class="hero__fallback" src="media/hero/f_041.webp" alt="Itachi presses two fingers to Sasuke's forehead." width="1280" height="720">
+      <canvas class="hero__rain" data-rain aria-hidden="true"></canvas>
+
+      <div class="hero__type" aria-hidden="true" lang="ja">
+        <p class="ht ht--col ht--l" data-hy="-14">うちはイタチ</p>
+        <p class="ht ht--col ht--r" data-hy="14">うちはサスケ</p>
+        <p class="ht ht--mini ht--m1">[ 第一章 ] 額<br>CHAPTER ONE — THE TOUCH</p>
+        <p class="ht ht--mini ht--m2">兄 · 弟 · 記憶<br>BROTHER · BROTHER · MEMORY</p>
+      </div>
+
+      <div class="hero__flash" data-flash aria-hidden="true"></div>
+      <div class="hero__vig" aria-hidden="true"></div>
+
+      <!-- phase A: intro -->
+      <div class="hero__intro" data-intro>
+        <p class="eyebrow"><i></i>うちは兄弟 · THE UCHIHA BROTHERS</p>
+        <h1 class="hero__title">
+          <span class="hero__title-jp" lang="ja" data-split>兄の手</span>
+          <span class="hero__title-en" data-split>A brother's hand.</span>
+        </h1>
+        <p class="hero__sub">Two fingers. A forehead. Everything he never got to say.</p>
+      </div>
+
+      <!-- phase B–D: captions -->
+      <ol class="hero__caps" aria-hidden="true">
+        <li data-cap><b>01</b><span class="jp" lang="ja">手</span><span data-decrypt>A HAND, REACHING</span></li>
+        <li data-cap><b>02</b><span class="jp" lang="ja">兄</span><span data-decrypt>ONE LAST STEP CLOSER</span></li>
+        <li data-cap><b>03</b><span class="jp" lang="ja">額</span><span data-decrypt>TWO FINGERS, ONE FOREHEAD</span></li>
+        <li data-cap><b>04</b><span class="jp" lang="ja">記憶</span><span data-decrypt>AND THE YEARS FALL AWAY</span></li>
+      </ol>
+
+      <!-- phase E: the line -->
+      <div class="hero__final" data-final>
+        <p class="hero__line" lang="ja" data-final-jp>許せ、サスケ</p>
+        <p class="hero__line-en">Forgive me, Sasuke<span>… this is the last time.</span></p>
+      </div>
+
+
+      <div class="hero__scroll" data-scroll-hint aria-hidden="true">
+        <span>Scroll to remember</span><i></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VELOCITY MARQUEE ===================== -->
+  <div class="velo" data-velo aria-hidden="true">
+    <div class="velo__row" data-velo-row="1"><span>ITACHI <i>✦</i> イタチ <i>✦</i> SASUKE <i>✦</i> サスケ <i>✦</i> 兄弟 <i>✦</i>&nbsp;</span></div>
+    <div class="velo__row velo__row--alt" data-velo-row="-1"><span>許せサスケ <i>◉</i> MAYBE NEXT TIME <i>◉</i> また今度だ <i>◉</i> FORGIVE ME <i>◉</i>&nbsp;</span></div>
+  </div>
+
+  <!-- ===================== 02 · RAIN — parallax image behind sliding doors ===================== -->
+  <section class="rain" id="rain" data-rain-sec aria-label="Itachi in the rain">
+    <div class="rain__stick">
+      <div class="rain__frame" data-rain-frame>
+        <div class="rain__img-wrap" data-rain-wrap>
+          <img class="rain__img" data-rain-img src="media/art/rain.webp" alt="Itachi in his Akatsuki cloak, face lifted to a storm sky, rain running down his cheek." decoding="async" width="1672" height="941">
+        </div>
+        <canvas class="rain__fall" data-downpour aria-hidden="true"></canvas>
+        <div class="rain__shade" aria-hidden="true"></div>
+      </div>
+
+      <p class="rain__kanji" lang="ja" aria-hidden="true" data-rain-kanji>雨</p>
+      <p class="rain__col" lang="ja" aria-hidden="true" data-rain-col>一人で背負った</p>
+
+      <div class="rain__copy" data-rain-copy>
+        <p class="index"><b>02</b> — 雨 / RAIN</p>
+        <h2 class="h2" data-rain-h>He carried it alone.</h2>
+        <p class="lede" data-scroll-words>Every lie. Every wound. Every night under a sky like this one — all of it so that one small boy could grow up hating him, and live.</p>
+      </div>
+
+      <ul class="rain__meta" aria-hidden="true" data-rain-meta>
+        <li><b lang="ja">暁</b><span>Akatsuki</span></li>
+        <li><b lang="ja">万華鏡</b><span>Mangekyō</span></li>
+        <li><b lang="ja">真実</b><span>The truth</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== 03 · PRAISE — scroll-scrubbed farewell ===================== -->
+  <section class="praise" id="praise" data-praise aria-label="Itachi praises Sasuke before he fades">
+    <div class="praise__stage" data-praise-stage>
+      <img class="praise__fallback" src="media/bond/b_020.webp" alt="Itachi, smiling, holds Sasuke's face in one hand as crows begin to lift from his cloak." loading="lazy" decoding="async" width="1280" height="720">
+      <canvas class="praise__canvas" data-praise-canvas aria-hidden="true"></canvas>
+      <div class="praise__vig" aria-hidden="true"></div>
+
+      <div class="praise__head">
+        <p class="index"><b>03</b> — 誇 / PRAISE</p>
+      </div>
+
+      <p class="praise__kanji" lang="ja" aria-hidden="true" data-praise-kanji>誇</p>
+
+      <ol class="praise__lines">
+        <li data-line><span class="jp" lang="ja">強くなったな</span><span class="en">You've grown strong.</span></li>
+        <li data-line><span class="jp" lang="ja">お前は俺の誇りだ</span><span class="en">You are my pride.</span></li>
+        <li data-line><span class="jp" lang="ja">俺を許さなくていい</span><span class="en">You never have to forgive me.</span></li>
+        <li data-line class="is-key"><span class="jp" lang="ja">お前をずっと愛している</span><span class="en">I will love you. Always.</span></li>
+        <li data-line class="is-end"><span class="jp" lang="ja">烏</span><span class="en">And then — only feathers.</span></li>
+      </ol>
+
+      <div class="praise__rail" aria-hidden="true"><i data-praise-bar></i></div>
+    </div>
+  </section>
+
+  <!-- ===================== 04 · BOND — the memory, on paper ===================== -->
+  <section class="bond" id="bond" data-bond aria-label="The brothers, years earlier">
+    <div class="bond__wash" aria-hidden="true"></div>
+
+    <div class="bond__grid">
+      <div class="bond__copy">
+        <p class="index index--ink" data-reveal><b>04</b> — 絆 / BOND</p>
+        <h2 class="h2 h2--ink" data-split>Before all of it, there was this.</h2>
+        <p class="lede lede--ink" data-scroll-words>A walk home from the training ground. A sprained ankle that wasn't really sprained. A little brother who only wanted to be carried a while longer.</p>
+        <ul class="bond__terms">
+          <li data-reveal><b lang="ja">兄</b><span>Ani — older brother</span></li>
+          <li data-reveal><b lang="ja">弟</b><span>Otōto — younger brother</span></li>
+          <li data-reveal><b lang="ja">絆</b><span>Kizuna — the bond</span></li>
+        </ul>
+      </div>
+
+      <figure class="bond__art" data-bond-art>
+        <span class="bond__sun" data-bond-sun aria-hidden="true"></span>
+        <span class="bond__kanji" lang="ja" aria-hidden="true" data-bond-kanji>兄弟</span>
+        <span class="bond__figure" data-bond-figure>
+          <img src="media/art/brothers.webp" alt="A young Itachi carrying a laughing Sasuke on his back." loading="lazy" decoding="async" width="822" height="1528">
+        </span>
+        <span class="bond__seal" aria-hidden="true" lang="ja" data-bond-seal>絆</span>
+        <figcaption lang="ja" aria-hidden="true">あの日の帰り道</figcaption>
+      </figure>
+    </div>
+
+    <!-- falling text -->
+    <div class="outro">
+      <p class="index index--ink" data-reveal>終 — LET IT GO</p>
+      <div class="fall" data-fall>
+        <div class="fall__target" data-fall-target>SORRY, SASUKE. MAYBE NEXT TIME. また今度だ 許せ サスケ NO MATTER WHAT YOU DO FROM HERE ON, I WILL LOVE YOU ALWAYS.</div>
+        <button class="fall__btn" data-fall-btn>Tap to let the words fall <span aria-hidden="true" lang="ja">散</span></button>
+      </div>
+    </div>
+
+    <footer class="foot">
+      <p class="foot__mark" lang="ja" data-reveal>兄弟</p>
+      <div class="foot__row">
+        <p>A fan-made tribute. Naruto and its characters belong to Masashi Kishimoto / Shueisha. Not affiliated.</p>
+        <a href="#top" class="foot__top">Back to the first touch ↑</a>
+      </div>
+    </footer>
+  </section>
+
+</main>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="vendor/matter.min.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
